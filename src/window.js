@@ -18,6 +18,9 @@ class Window extends Component {
         
 
         this.setState({headlines: data.articles, loading: false});
+        const arr = this.state.headlines
+        arr.forEach(item => console.log(item.author))
+
 
         console.log(data.articles);
                         
@@ -36,7 +39,14 @@ class Window extends Component {
        return (
            <div>
               <div>
-       <div>{this.state.headlines[0].author}</div>
+                <div>{this.state.headlines[0].title}</div>
+                <div>{this.state.headlines[0].author}</div>
+                <div>{this.state.headlines[0].content}</div>
+                <div>
+                    <a href={this.state.headlines[0].url}>
+                        <img src={this.state.headlines[0].urlToImage} alt="news"/>
+                    </a>
+                </div>     
               
               </div>
            </div>

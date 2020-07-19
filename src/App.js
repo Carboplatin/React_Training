@@ -8,6 +8,7 @@ class App extends Component {
       <div>
           <h2>TEST TEST TEST</h2>
           <Window/>
+          <Window/>
           
           
           
