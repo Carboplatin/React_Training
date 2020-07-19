@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
+// import { BrowserRouter, Route } from 'react-router-dom'
 import Window from './window';
-
+import Navbar from './navbar';
+import './index.css'
 
 class App extends Component {
   render() {
     return (
       <div>
-          <h2>TEST TEST TEST</h2>
-          <Window/>
-          <Window/>
-          
-          
+        <div>
+          <Navbar/>
+        </div>
+        <div>
+            <h2>NEWS PAGE</h2>
+            <Window/>
+            
+            
+            
+            
+        </div>
       </div>
     );
   }
