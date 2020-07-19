@@ -6,9 +6,9 @@ class App extends Component {
   render() {
     return (
       <div>
-          <h2>TEST TEST TEST</h2>
+          <h2>NEWS PAGE</h2>
           <Window/>
-          <Window/>
+          
           
           
           

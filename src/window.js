@@ -18,10 +18,6 @@ class Window extends Component {
         
 
         this.setState({headlines: data.articles, loading: false});
-        const arr = this.state.headlines
-        arr.forEach(item => console.log(item.author))
-
-
         console.log(data.articles);
                         
     }
@@ -33,20 +29,25 @@ class Window extends Component {
        }
 
        if (!this.state.headlines){
-        return <div>place holder</div>
+        return <div>no results</div>
        }
 
        return (
            <div>
               <div>
-                <div>{this.state.headlines[0].title}</div>
-                <div>{this.state.headlines[0].author}</div>
-                <div>{this.state.headlines[0].content}</div>
-                <div>
-                    <a href={this.state.headlines[0].url}>
-                        <img src={this.state.headlines[0].urlToImage} alt="news"/>
-                    </a>
-                </div>     
+                  {this.state.headlines.map(item=>(
+                    <div key={item.publishedAt}>  
+                      <div>{item.title}</div>
+                      <div>{item.author}</div>
+                      <div>{item.content}</div>
+                      <div>
+                          <a href={item.url}>
+                              <img src={item.urlToImage} alt="news"/>
+                          </a>
+                      </div>  
+                    </div>     
+                  ))}
+                
               
               </div>
            </div>
