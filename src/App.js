@@ -7,17 +7,13 @@ import './index.css'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='content'>
         <div>
           <Navbar/>
         </div>
         <div>
             <h2>NEWS PAGE</h2>
-            <Window/>
-            
-            
-            
-            
+            <Window/>            
         </div>
       </div>
     );

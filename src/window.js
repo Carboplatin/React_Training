@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './window.css'
 // Your API key is: 95121b77c00d4f83b3d7994d1f8982fc
 
 class Window extends Component {
@@ -33,18 +33,22 @@ class Window extends Component {
        }
 
        return (
-           <div>
+           <div className='container'>
               <div>
                   {this.state.headlines.map(item=>(
-                    <div key={item.publishedAt}>  
-                      <div>{item.title}</div>
-                      <div>{item.author}</div>
-                      <div>{item.content}</div>
-                      <div>
-                          <a href={item.url}>
-                              <img src={item.urlToImage} alt="news"/>
-                          </a>
-                      </div>  
+                    <div key={item.publishedAt + item.author} className='wrapper'>
+                        <div className='blocks'>
+
+                            <div>{item.title}{item.author}</div>
+                                                
+                            <div>
+                                <a href={item.url}>
+                                    <img src={item.urlToImage} alt="news"/>
+                                </a>
+                            </div> 
+
+                            <div>{item.content}</div> 
+                        </div>
                     </div>     
                   ))}
                 
