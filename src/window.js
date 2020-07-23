@@ -34,23 +34,20 @@ class Window extends Component {
 
        return (
            <div className='container'>
-              <div>
+              <div className='wrapper'>
                   {this.state.headlines.map(item=>(
-                    <div key={item.publishedAt + item.author} className='wrapper'>
-                        <div className='blocks'>
-
-                            <div>{item.title}{item.author}</div>
-                                                
+                    <div key={item.publishedAt + item.author} >
                             <div>
+                                {item.title}
+                                {item.author}
                                 <a href={item.url}>
                                     <img src={item.urlToImage} alt="news"/>
                                 </a>
-                            </div> 
-
-                            <div>{item.content}</div> 
-                        </div>
+                                {item.content}
+                            </div>
                     </div>     
-                  ))}
+                  
+                ))}
                 
               
               </div>
@@ -60,3 +57,7 @@ class Window extends Component {
    }
 }
 export default Window;
+                                             
+
+                                                
+                          

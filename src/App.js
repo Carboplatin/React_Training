@@ -13,7 +13,9 @@ class App extends Component {
         </div>
         <div>
             <h2>NEWS PAGE</h2>
-            <Window/>            
+            <Window/> 
+              
+                    
         </div>
       </div>
     );
